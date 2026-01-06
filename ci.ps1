@@ -9,7 +9,7 @@ foreach ($file in $requiredFiles) {
     }
 }
 
-if (-Not (Select-String "<html>" index.html -Quiet)) {
+if (-Not (Select-String "</html>" index.html -Quiet)) {
     Write-Host "CI FAIL: Invalid HTML structure"
     exit 1
 }
